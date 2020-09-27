@@ -30,6 +30,16 @@ The `comp:obj` relation is used for direct object complements, including direct 
 4	bar	bar	NOUN	_	Gender=Masc|Number=Sing	2	comp:obj	_	SpaceAfter=No
 {{< /conll >}}
 
+> Russian
+
+{{< conll >}}
+# text_ru = Я ставлю точку
+# text_en = I put a point
+1	Я	я	PRON	_	Animacy=Anim|Case=Nom|Number=Sing	2	subj	_	Gloss=I
+2	ставлю	ставить	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Gloss=put
+3	точку	точка	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	2	comp:obj	_	Gloss=point
+{{< /conll >}}
+
 Usually, in order to determine whether an object is direct or not, it suffices to know if it forms a construction with a preposition. If it doesn't, the object is direct. According to different languages, this criterion may be insufficient.
 In the following examples we can see direct objects of the Spanish verb *ver*. With animate objects this verb takes the preposition *a*, however the object is still considered direct and therefore the relation stays `comp:obj`.
 
@@ -95,6 +105,23 @@ In the following examples we can see direct objects of the Spanish verb *ver*. W
 18	skills	skill	NOUN	NNS	Number=Plur	16	conj	_	Entity=(abstract-123)abstract-121)|SpaceAfter=No
 {{< /conll >}}
 
+> Russian
+
+{{< conll >}}
+# sent_id = dev-s184
+# text_ru = С запада к храму примыкала трапезная часть с колокольней
+# text_en = From the west, the refectory part with the bell tower was adjoining the temple
+1	С	с	ADP	IN	_	5	comp:obl	_	Gloss=From
+2	запада	запад	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	1	comp:obj	_	Gloss=west
+3	к	к	ADP	IN	_	5	comp:obl	_	Gloss=to
+4	храму	храм	NOUN	NN	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	3	comp:obj	_	Gloss=temple
+5	примыкала	примыкать	VERB	VBC	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Gloss=was adjoining
+6	трапезная	трапезный	ADJ	JJL	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	7	mod	_	Gloss=refectory
+7	часть	часть	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	subj	_	Gloss=part
+8	с	с	ADP	IN	_	7	udep	_	Gloss=with
+9	колокольней	колокольня	NOUN	NN	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	8	comp:obj	_	Gloss=bell tower
+{{< /conll >}}
+
 ## Subordinating conjunction arguments
 
 > English
@@ -147,6 +174,54 @@ In the following examples we can see direct objects of the Spanish verb *ver*. W
 7	girl	girl	NOUN	_	_	5	comp:pred	_	Gloss=girl
 {{< /conll >}}
 
+> Russian
+
+{{< conll >}}
+# sent_id = dev-s108
+# text_ru = Если налог перелагается, то это значит, что он выступает в роли особого ценообразующего фактора
+# text_en = If the tax is shifted, then it means that it acts in the role of a special pricing factor
+# text_fr = Si la taxe est déplacé, alors cela signifie qu'il agit comme un facteur de prix spéciaux.
+1	Если	если	SCONJ	IN	_	5	mod	_	Gloss=If
+2	налог	налог	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	subj	_	Gloss=tax
+3	перелагается	перелагаться	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	1	comp:obj	_	Gloss=is shifted
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	то	то	SCONJ	IN	_	0	root	_	Gloss=then
+6	это	это	PRON	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	7	subj	_	Gloss=it
+7	значит	значить	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	comp:obj	_	Gloss=means
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	что	что	SCONJ	IN	_	7	comp:obj	_	Gloss=that
+10	он	он	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3	11	subj	_	Gloss=it
+11	выступает	выступать	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	comp:obj	_	Gloss=acts
+12	в	в	ADP	IN	_	11	udep	_	Gloss=in
+13	роли	роль	NOUN	NN	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	12	comp:obj	_	Gloss=role
+14	особого	особый	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	16	mod	_	Gloss=special
+15	ценообразующего	ценообразующий	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	16	mod	_	Gloss=pricing
+16	фактора	фактор	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	13	udep	_	Gloss=factor
+{{< /conll >}}
+
+{{< conll >}}
+# sent_id = dev-s108
+# text_ru = Если налог перелагается, то это значит, что он выступает в роли особого ценообразующего фактора
+# text_en = If the tax is shifted, then it means that it acts in the role of a special pricing factor
+# text_fr = Si la taxe est déplacé, alors cela signifie qu'il agit comme un facteur de prix spéciaux.
+1	Если	если	SCONJ	IN	_	5	mod	_	Gloss=If
+2	налог	налог	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	subj	_	Gloss=tax
+3	перелагается	перелагаться	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	1	comp:obj	_	Gloss=is shifted
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	то	то	SCONJ	IN	_	7	comp:obl	_	Gloss=then
+6	это	это	PRON	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	7	subj	_	Gloss=it
+7	значит	значить	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Gloss=means
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	что	что	SCONJ	IN	_	7	comp:obj	_	Gloss=that
+10	он	он	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3	11	subj	_	Gloss=it
+11	выступает	выступать	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	comp:obj	_	Gloss=acts
+12	в	в	ADP	IN	_	11	udep	_	Gloss=in
+13	роли	роль	NOUN	NN	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	12	comp:obj	_	Gloss=role
+14	особого	особый	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	16	mod	_	Gloss=special
+15	ценообразующего	ценообразующий	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	16	mod	_	Gloss=pricing
+16	фактора	фактор	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	13	udep	_	Gloss=factor
+{{< /conll >}}
+
 ## Complement of an adverb of comparison
 Constructions such as: *plus... que* (French), *more... than* (English), *più... di* (Italian), *bardziej... niż* (Polish).
 
@@ -163,10 +238,27 @@ Constructions such as: *plus... que* (French), *more... than* (English), *più..
 7	predecessors	predecessor	NOUN	NNS	Number=Plur	5	comp:obj	_	_
 {{< /conll >}}
 
-> French
+> Russian
+
+{{< conll >}}
+# text = электроны имеют отклик намного более быстрый, чем атомы
+1	электроны	электрон	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	2	subj	_	_
+2	имеют	иметь	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+3	отклик	отклик	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	2	comp:obj	_	_
+4	намного	намного	ADV	_	Degree=Pos	5	mod	_	_
+5	более	более	ADV	_	Degree=Cmp	6	mod	_	_
+6	быстрый	быстрый	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	3	mod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	8	punct	_	_
+8	чем	чем	SCONJ	_	_	5	comp:obj	_	_
+9	атомы	атом	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	8	comp:obj	_	_
+{{< /conll >}}
+
 
 ## Complement in consecutive constructions
 Constructions such as: *tellement... que* (French), *so... that* (English), *così... che* (Italian), *tak... że* (Polish).
+
+> French
+
 {{< conll >}}
 1	tellement	tellement	ADV	_	_	2	mod	_	_
 2	vaste	vaste	ADJ	_	_	0	root	_	_
@@ -175,6 +267,23 @@ Constructions such as: *tellement... que* (French), *so... that* (English), *cos
 5	s'	se	PRON	_	_	7	comp	_	_
 6	y	y	PRON	_	_	7	mod	_	_
 7	perd	perd	VERB	_	_	3	comp:obj	_	_
+{{< /conll >}}
+
+> Russian
+
+{{< conll >}}
+# sent_id = 2007Tele.xml_38
+# text_ru = Изображение настолько хорошее, что все забыли о тестировании и начали смотреть фильм
+# text_en = The image was so good that everyone forgot about testing
+1	Изображение	изображение	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	3	subj	_	Gloss=image
+2	настолько	настолько	ADV	_	Degree=Pos	3	mod	_	Gloss=so
+3	хорошее	хороший	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	Gloss=good
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	что	что	SCONJ	_	_	2	comp:obj	_	Gloss=that
+6	все	все	PRON	_	Animacy=Anim|Case=Nom|Number=Plur	7	subj	_	Gloss=everyone
+7	забыли	забыть	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	5	comp:obj	_	Gloss=forgot
+8	о	о	ADP	_	_	7	comp:obl	_	Gloss=about
+9	тестировании	тестирование	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	8	comp:obj	_	Gloss=testing
 {{< /conll >}}
 
 ## Deep subjects of impersonal constructions
@@ -193,6 +302,23 @@ Constructions such as: *tellement... que* (French), *so... that* (English), *cos
 8	de	de	ADP	_	_	7	udep	_	Gloss=of
 9	crampons	crampon	NOUN	_	Gender=Masc|Number=Plur	8	comp:obj	_	Gloss=cleats
 10	différents	différent	ADJ	_	Gender=Masc|Number=Plur	9	mod	_	Gloss=different
+{{< /conll >}}
+
+> Russian
+
+{{< conll >}}
+# sent_id = uppsalaGrekova_3.xml_179
+# text_ru = Прошло много времени, пока я к ней приспособилась
+# text_en = It took a lot of time until I got used to it
+1	Прошло	пройти	VERB	_	Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Gloss=passed
+2	много	много	ADV	_	Degree=Pos	1	comp:obj@agent	_	Gloss=a lot of
+3	времени	время	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	2	comp:obl	_	Gloss=time
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	пока	пока	SCONJ	_	_	1	mod	_	Gloss=until
+6	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	9	subj	_	Gloss=I
+7	к	к	ADP	_	_	9	comp:obl	_	Gloss=to
+8	ней	она	PRON	_	Case=Dat|Gender=Fem|Number=Sing|Person=3	7	comp:obj	_	Gloss=it
+9	приспособилась	приспособиться	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	5	comp:obj	_	Gloss=got used
 {{< /conll >}}
 
 ## Deep syntactic features
