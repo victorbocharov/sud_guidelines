@@ -180,7 +180,7 @@ In the following examples we can see direct objects of the Spanish verb *ver*. W
 # sent_id = dev-s108
 # text_ru = Если налог перелагается, то это значит, что он выступает в роли особого ценообразующего фактора
 # text_en = If the tax is shifted, then it means that it acts in the role of a special pricing factor
-# text_fr = Si la taxe est déplacé, alors cela signifie qu'il agit comme un facteur de prix spéciaux.
+# text_fr = Si la taxe est déplacée, alors cela signifie qu'elle agit comme un facteur de prix spéciaux.
 1	Если	если	SCONJ	IN	_	5	mod	_	Gloss=If
 2	налог	налог	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	subj	_	Gloss=tax
 3	перелагается	перелагаться	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	1	comp:obj	_	Gloss=is shifted
@@ -203,7 +203,7 @@ In the following examples we can see direct objects of the Spanish verb *ver*. W
 # sent_id = dev-s108
 # text_ru = Если налог перелагается, то это значит, что он выступает в роли особого ценообразующего фактора
 # text_en = If the tax is shifted, then it means that it acts in the role of a special pricing factor
-# text_fr = Si la taxe est déplacé, alors cela signifie qu'il agit comme un facteur de prix spéciaux.
+# text_fr = Si la taxe est déplacée, alors cela signifie qu'elle agit comme un facteur de prix spéciaux.
 1	Если	если	SCONJ	IN	_	5	mod	_	Gloss=If
 2	налог	налог	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	subj	_	Gloss=tax
 3	перелагается	перелагаться	VERB	VBC	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	1	comp:obj	_	Gloss=is shifted
